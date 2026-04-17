@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { HashRouter } from "react-router-dom";
 import App from "./App.jsx";
+import "./globals.css";
 
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 const hasValidClerkKey = Boolean(clerkPubKey) && clerkPubKey.startsWith("pk_");

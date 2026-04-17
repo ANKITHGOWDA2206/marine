@@ -24,13 +24,13 @@ function ClerkAuthButtons({ onLogout }) {
     <>
       <SignedOut>
         <SignInButton mode="modal">
-          <button className="header-btn header-login">Login</button>
+          <button className="sg-btn sg-btn--ghost header-auth">Login</button>
         </SignInButton>
       </SignedOut>
 
       <SignedIn>
         <UserButton afterSignOutUrl="/" />
-        <button className="header-btn header-login" onClick={handleLogout}>Logout</button>
+        <button className="sg-btn sg-btn--ghost header-auth" onClick={handleLogout}>Logout</button>
       </SignedIn>
     </>
   );
@@ -59,7 +59,8 @@ function Header() {
 
   return (
     <header className="header-container">
-      <Link to="/" className="header-logo">
+      <div className="header-inner sg-container">
+      <Link to="/" className="header-logo" aria-label="SeaGuardian home">
         <img src="/png-jpg/logo/SeaGuardian Logo.png" alt="SeaGuardian Logo" />
       </Link>
 
@@ -74,12 +75,12 @@ function Header() {
         </ul>
         <div className="header-buttons">
           <Link to="/Locator">
-          <button className="abc-btn abc-donate">Locator</button>
+          <button className="sg-btn sg-btn--ghost">Locator</button>
           </Link>
 
           
           <Link to="/donate">
-            <button className="header-btn header-donate">Donate</button>
+            <button className="sg-btn sg-btn--primary">Donate</button>
           </Link>
 
           {clerkEnabled ? <ClerkAuthButtons onLogout={handleLogout} /> : null}
@@ -88,6 +89,7 @@ function Header() {
 
       <div className="header-hamburger" onClick={toggleMenu}>
         {menuOpen ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
+      </div>
       </div>
     </header>
   );

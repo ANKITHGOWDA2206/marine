@@ -1,10 +1,10 @@
 
 
 .the-latest-container {
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background: linear-gradient(to top, var(--background-gradient-top), var(--background-gradient-middle), var(--background-gradient-top));
+    max-width: var(--sg-container);
+    margin: 0 auto;
+    padding: var(--sg-section-pad) 24px;
+    background: transparent;
 }
 
 .the-latest-news-container {
@@ -24,11 +24,11 @@
     display: flex;
     flex-direction: column;
     background: white;
-    border-radius: 16px;
-    box-shadow: var(--card-shadow);
+    border-radius: var(--sg-radius-card);
+    box-shadow: var(--sg-shadow);
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--sg-border);
 }
 
 .the-latest-news-image {
@@ -47,13 +47,13 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background: var(--background-light);
+    background: transparent;
 }
 
 .the-latest-news-title {
     font-size: 20px;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--sg-navy);
     margin-bottom: 12px;
     line-height: 1.4;
     display: -webkit-box;
@@ -64,7 +64,7 @@
 
 .the-latest-news-description {
     font-size: 15px;
-    color: var(--text-light);
+    color: rgba(13, 43, 69, 0.78);
     margin-bottom: 15px;
     flex-grow: 1;
     line-height: 1.6;
@@ -76,7 +76,7 @@
 
 .the-latest-news-source {
     font-size: 13px;
-    color: var(--primary-color);
+    color: var(--sg-teal);
     margin-bottom: 15px;
     font-weight: 600;
     opacity: 0.8;
@@ -87,8 +87,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: rgb(0, 0, 0);
+    background: var(--sg-teal);
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     padding: 10px 20px;
@@ -96,13 +96,13 @@
     text-decoration: none;
     transition: all 0.3s ease;
     gap: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--sg-shadow);
 }
 
 .the-latest-read-more-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    box-shadow: var(--sg-shadow);
+    filter: brightness(0.95);
 }
 
 .the-latest-read-more-btn::after {
@@ -118,27 +118,20 @@
 .the-latest-heading1 {
     text-align: center;
     font-size: 32px;
-    font-weight: 800;
-    color: rgb(0, 0, 0);
-    padding: 20px;
+    font-weight: 600;
+    color: var(--sg-navy);
+    padding: 0;
     margin-bottom: 40px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     letter-spacing: -0.5px;
     position: relative;
     overflow: hidden;
 }
 
 .the-latest-heading1::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(-45deg);
+    content: none;
 }
 
 /* Responsive */
@@ -156,7 +149,7 @@
 
 @media (max-width: 480px) {
     .the-latest-container {
-        padding: 0 10px;
+        padding: var(--sg-section-pad) 16px;
     }
 
     .the-latest-news-title {
@@ -184,22 +177,24 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f8d7da;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: var(--sg-radius-card);
+    border: 1px solid var(--sg-border);
+    box-shadow: var(--sg-shadow);
 }
 
 .the-latest-error {
-    color: #721c24;
+    color: var(--sg-navy);
     margin-bottom: 15px;
     text-align: center;
 }
 
 .the-latest-retry-btn {
-    background: linear-gradient(45deg, #0172af, #74febe);
-    color: white;
+    background: var(--sg-teal);
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: var(--sg-radius-btn);
     cursor: pointer;
     transition: transform 0.3s ease;
 }

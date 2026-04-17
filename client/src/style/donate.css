@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
-
 .donate-container1 {
     margin-top: 10px;
-    background-color: white;
-    margin: 10px 300px;
-    padding: 10px;
-    width: 32%;
+    background-color: #ffffff;
+    margin: 24px auto;
+    padding: 24px;
+    width: 100%;
+    max-width: 560px;
     height: 570px;
     overflow: auto;
-    font-family: 'Red Hat Display', sans-serif;
+    border: 1px solid var(--sg-border);
+    border-radius: var(--sg-radius-card);
+    box-shadow: var(--sg-shadow);
 }
 
 .donate-container1 h1 {
@@ -36,10 +37,10 @@
     font-size: 17px;
     padding: 0.5em 2em;
     border: transparent;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    background: #F8E559;
+    box-shadow: var(--sg-shadow);
+    background: var(--sg-coral);
     color: white;
-    border-radius: 2px;
+    border-radius: var(--sg-radius-btn);
 }
 
 .donate-type-of-gift {
@@ -75,14 +76,14 @@
     font-size: 17px;
     padding: 0.5em 2em;
     border: transparent;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    background: #F8E559;
+    box-shadow: var(--sg-shadow);
+    background: var(--sg-coral);
     color: white;
-    border-radius: 2px;
+    border-radius: var(--sg-radius-btn);
 }
 
 .donate-button button:hover {
-    background: linear-gradient(90deg, #ffe109 0%, #d1c40e 100%);
+    filter: brightness(0.95);
     cursor: pointer;
 }
 
@@ -101,16 +102,16 @@
     margin-bottom: 5px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #000000;
+    color: var(--sg-navy);
 }
 
 .donate-input, .donate-select {
     width: 90%;
     height: 40px;
     background-color: #ffffff;
-    border-radius: 0.5rem;
+    border-radius: var(--sg-radius-btn);
     padding: 0 1rem;
-    border: 2px groove rgba(0, 0, 0, 0.349);
+    border: 1px solid var(--sg-border);
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -174,34 +175,32 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #555;
+    border: 2px solid rgba(13, 43, 69, 0.55);
 }
 
 
 .donate-radio-button__input:checked + .donate-radio-button__label .donate-radio-button__custom {
     transform: translateY(-50%) scale(0.9);
-    border: 5px solid #4c8bf5;
-    color: #4c8bf5;
+    border: 5px solid var(--sg-teal);
+    color: var(--sg-teal);
 }
 
 .donate-radio-button__input:checked + .donate-radio-button__label {
-    color: #4c8bf5;
+    color: var(--sg-teal);
 }
 
 .donate-button.active, .donate-price button.active {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, #ffe109 0%, #d1c40e 100%);
+    background: var(--sg-coral);
 }
 
 @media screen and (max-width: 768px) {
     .donate-container1 {
-        background-color: white;
-        margin: 10px 20px;
-        padding: 10px;
-        width: 90%;
+        background-color: #ffffff;
+        margin: 18px auto;
+        padding: 18px;
+        width: calc(100% - 48px);
         height: 570px;
         overflow: auto;
-        font-family: 'Red Hat Display', sans-serif;
     }
 
 

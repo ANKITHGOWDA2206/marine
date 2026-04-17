@@ -1,0 +1,141 @@
+:root {
+  --sg-navy: #0d2b45;
+  --sg-teal: #0e7c6e;
+  --sg-bg: #f4f9ff;
+  --sg-coral: #e8563a; /* CTA only */
+
+  --sg-text: var(--sg-navy);
+  --sg-border: rgba(13, 43, 69, 0.14);
+
+  --sg-radius-card: 12px;
+  --sg-radius-btn: 8px;
+  --sg-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  --sg-container: 1200px;
+  --sg-section-pad: 80px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--sg-bg);
+  color: var(--sg-text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--sg-teal);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--sg-navy);
+  margin: 0;
+  text-transform: none !important;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+.sg-container {
+  max-width: var(--sg-container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sg-section {
+  padding: var(--sg-section-pad) 0;
+}
+
+.sg-card {
+  background: #ffffff;
+  border: 1px solid var(--sg-border);
+  border-radius: var(--sg-radius-card);
+  box-shadow: var(--sg-shadow);
+}
+
+.sg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--sg-radius-btn);
+  padding: 10px 16px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+}
+
+.sg-btn:focus-visible {
+  outline: 3px solid rgba(14, 124, 110, 0.25);
+  outline-offset: 2px;
+}
+
+.sg-btn--primary {
+  background: var(--sg-coral);
+  color: #ffffff;
+}
+
+.sg-btn--primary:hover {
+  filter: brightness(0.95);
+  text-decoration: none;
+}
+
+.sg-btn--ghost {
+  background: transparent;
+  color: var(--sg-teal);
+  border-color: rgba(14, 124, 110, 0.35);
+}
+
+.sg-btn--ghost:hover {
+  background: rgba(14, 124, 110, 0.08);
+  text-decoration: none;
+}
+
+.sg-divider {
+  border: 0;
+  border-top: 1px solid var(--sg-border);
+  margin: 0;
+}

@@ -7,7 +7,7 @@ import "./footer.css";
 function Footer() {
   return (
     <footer>
-      <div className="footer-wrapper">
+      <div className="footer-wrapper sg-container">
         <section className="footer-top">
           <div className="footer-headline">
             <h2>Donate to make Pollution-Free Marine</h2>
@@ -15,7 +15,7 @@ function Footer() {
           </div>
           <div className="footer-subscribe">
             <Link to="/donate">
-              <button id="donate">Donate</button>
+              <button id="donate" className="sg-btn sg-btn--primary">Donate</button>
             </Link>
           </div>
         </section>

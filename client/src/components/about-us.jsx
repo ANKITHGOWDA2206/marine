@@ -7,19 +7,19 @@ import Footer from '../common-components/footer';
 const About = () => {
     const detailData = [
         {
-            title: 'PROBLEM STATEMENT',
+            title: 'Problem statement',
             paragraph: "Oil spills from offshore drilling and shipping accidents introduce toxic substances into the marine environment. These spills coat marine animals and seabirds, damage coral reefs, and take years to recover from. The slow response to cleanup efforts worsens the environmental and economic impacts on coastal communities. ",
             imageSrc: '/png-jpg/content-pic1.jpg ' 
             
             ,
         },
         {
-            title: 'PROBLEM STATEMENT',
+            title: 'Problem statement',
             paragraph: "The increasing amount of plastic waste dumped into oceans each year is suffocating marine ecosystems. Plastic bags, bottles, and microplastics are ingested by sea creatures, leading to injuries, poisoning, and death. This pollution threatens not only marine biodiversity but also human health through the food chain",
             imageSrc: '/png-jpg/content-pic2.jpg',
         },
         {
-            title: 'OUR VISION',
+            title: 'Our vision',
             paragraph: "To create a cleaner, healthier, and sustainable ocean environment by raising awareness, reducing marine pollution, and promoting innovative, eco-friendly solutions that protect marine life and preserve ocean resources for future generations.",
             imageSrc: '/png-jpg/content-pic3.jpg',
         },
@@ -88,7 +88,7 @@ const About = () => {
                     </div>
                 ))}
                 <div className="team-members">
-                    <span className='team-title'>MEET THE TEAM</span>
+                    <span className='team-title'>Meet the team</span>
                     <div className="team-members-details">
                         {socialLinks.map((member, index) => (
                             <div key={index} className="member-details">

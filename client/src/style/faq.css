@@ -1,16 +1,8 @@
-/* Color Palette */
-:root {
-    --primary-blue: #0073ff;
-    --background-gradient-top: #ffffff;
-    --background-gradient-middle: #599bcb6b;
-    --border-color: #ccc;
-    --text-color: black;
-    --white: #ffffff;
-  }
-  
   /* Main Styles */
   main {
-      padding: 20px 70px 20px 70px;
+      max-width: var(--sg-container);
+      margin: 0 auto;
+      padding: var(--sg-section-pad) 24px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -30,15 +22,20 @@
   }
   
   .faq-q_a p {
-      border-bottom: 1px solid var(--text-color);
+      border-bottom: 1px solid var(--sg-border);
       margin-left: 5%;
       padding-bottom: 2%;
   }
   
   .faq-q_a p a {
       font-size: 20px;
-      color: var(--text-color);
+      color: var(--sg-navy);
       text-decoration: none;
+  }
+
+  .faq-q_a p a:hover {
+      color: var(--sg-teal);
+      text-decoration: underline;
   }
   
   .faq-thank-u {
@@ -50,10 +47,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-radius: 10px;
-      box-shadow: 20px 13px 20px 10px rgba(0, 0, 0, 0);
-      background: linear-gradient(to top, var(--background-gradient-top), var(--background-gradient-middle), var(--background-gradient-top));
+      border-radius: var(--sg-radius-card);
+      box-shadow: var(--sg-shadow);
+      background: #ffffff;
+      border: 1px solid var(--sg-border);
       text-align: center;
+      padding: 24px;
   }
   
   .faq-section__support h3 {
@@ -79,16 +78,16 @@
   .faq-form__group select {
       width: 100%;
       padding: 2%;
-      border-radius: 5px;
-      border: 1px solid var(--border-color);
+      border-radius: var(--sg-radius-btn);
+      border: 1px solid var(--sg-border);
       margin-top: 0.5rem;
   }
   
   .faq-form__group textarea {
       width: 100%;
       padding: 7%;
-      border-radius: 5px;
-      border: 1px solid var(--border-color);
+      border-radius: var(--sg-radius-btn);
+      border: 1px solid var(--sg-border);
       margin-top: 0.5rem;
       resize: vertical;
   }
@@ -98,11 +97,11 @@
   }
   
   .faq-sub__btn {
-      background-color: var(--primary-blue);
-      color: var(--white);
+      background-color: var(--sg-teal);
+      color: #ffffff;
       padding: 10px 20px;
       border: none;
-      border-radius: 5px;
+      border-radius: var(--sg-radius-btn);
       cursor: pointer;
       transition: all 0.3s ease;
       margin-top: 1rem;
@@ -110,7 +109,7 @@
   
   .faq-sub__btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: var(--sg-shadow);
   }
   
   .faq-frm {

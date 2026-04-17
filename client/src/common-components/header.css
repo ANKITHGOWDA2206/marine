@@ -1,288 +1,105 @@
-/* General header styles */
-header {
-  background-color: white;
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--sg-bg);
+  border-bottom: 1px solid var(--sg-border);
+}
+
+.header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 70px;
-  width: 100%;
-  height: 100%;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 20px;
 }
 
-/* Logo */
 .header-logo img {
-  height: 100px;
+  height: 46px;
+  width: auto;
 }
 
-/* Navigation Menu */
 .header-nav {
   display: flex;
   align-items: center;
+  gap: 28px;
 }
 
 .header-menu {
   display: flex;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  gap: 22px;
 }
 
-.header-menu li {
-  margin: 20px;
-}
-
-.header-menu li a {
+.header-menu a {
+  font-weight: 500;
+  color: var(--sg-navy);
   text-decoration: none;
-  font-size: 22px; /* Increased font size */
-  font-weight: bold;
-  color: #000;
-  transition: 0.3s all;
+  padding: 8px 6px;
+  border-radius: 8px;
 }
 
-.header-menu li a:hover {
-  color: #00000088;
-  text-decoration: underline;
+.header-menu a:hover {
+  color: var(--sg-teal);
+  background: rgba(14, 124, 110, 0.08);
+  text-decoration: none;
 }
 
-/* Buttons (Donate & Login) */
 .header-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 12px;
 }
 
-.header-btn {
-  padding: 10px 20px;
-  font-size: 19px;
-  color: #fff;
-  border-radius: 7px;
-  letter-spacing: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: 0.5s;
-  border: none;
-  margin-left: 9px;
-}
-
-.header-donate {
-  background: #F8E559;
-  box-shadow: 0 0 25px #FAEF5D;
-}
-
-.header-donate:hover {
-  box-shadow: 0 0 5px #FAEF5D, 0 0 25px #FAEF5D, 0 0 50px #FAEF5D, 0 0 100px #FAEF5D;
-}
-
-.header-login {
-  background: #365486;
-  box-shadow: 0 0 25px #365486;
-  margin-left: 15px;
-}
-
-.header-login:hover {
-  box-shadow: 0 0 5px #365486, 0 0 25px #365486, 0 0 50px #365486, 0 0 100px #365486;
-}
-
-/* Hamburger Menu */
 .header-hamburger {
   display: none;
   cursor: pointer;
+  color: var(--sg-navy);
 }
 
-/* Responsive Design */
-/* ... (existing styles remain the same) */
-
-/* Updated Responsive Design */
-@media screen and (max-width: 1024px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 30px;
-    position: relative;
-  }
-
-  .header-logo img {
-    height: 70px;
+@media (max-width: 768px) {
+  .header-hamburger {
+    display: block;
   }
 
   .header-nav {
-    position: absolute;
-    top: 100%;
+    position: fixed;
     left: 0;
     right: 0;
-    background: white;
+    top: 72px;
     display: none;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 18px 16px 22px;
+    background: rgba(244, 249, 255, 0.98);
+    border-bottom: 1px solid var(--sg-border);
   }
 
   .header-nav.header-nav-active {
     display: flex;
-    flex-direction: column;
   }
 
   .header-menu {
     flex-direction: column;
-    width: 100%;
-    position: static;
-    padding: 0;
+    align-items: stretch;
+    gap: 6px;
   }
 
-  .header-menu li {
-    margin: 10px 0;
-  }
-
-  .header-menu li a {
-    font-size: 25px;
+  .header-menu a {
+    padding: 12px 12px;
   }
 
   .header-buttons {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 25px;
+    align-items: stretch;
   }
 
-  .header-btn {
+  .header-buttons .sg-btn {
     width: 100%;
-    margin-left: 0 !important;
-    font-size: 36px;
-    padding: 12px 18px;
-  }
-
-  .header-hamburger {
-    display: block;
-    z-index: 1001;
-  }
-}
-
-/* Phone-specific adjustments */
-@media screen and (max-width: 480px) {
-  header {
-    padding: 15px 20px;
-    width: 100%;
-  }
-
-  .header-logo img {
-    height: 50px;
-  }
-
-  .header-menu li a {
-    font-size: 24px;
-  }
-
-  .header-btn {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
-
-  .header-hamburger {
-    transform: scale(0.9);
-    color: #000;
-  }
-
-  .header-nav {
-    padding: 15px 20px;
-  }
-}
-.abc-btn {
-  padding: 10px 15px;
-  font-size: 17px;
-  color: #fff;
-  border-radius: 7px;
-  letter-spacing: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: 0.5s;
-  border: none;
-}
-
-.abc-donate {
-  background: #2e96dc;
-  box-shadow: 0 0 25px #FAEF5D;
-}
-
-.abc-donate:hover {
-  box-shadow: 0 0 5px #FAEF5D, 0 0 25px #FAEF5D, 0 0 50px #FAEF5D, 0 0 100px #FAEF5D;
-}
-
-@media (max-width: 768px) {
-  .abc-btn,
-  .header-btn {
-    padding: 8px 12px;
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .abc-donate {
-    box-shadow: 0 0 15px #FAEF5D;
-    height:40px;
-    
-  }
-
-  .abc-donate:hover {
-    box-shadow: 0 0 3px #FAEF5D, 0 0 15px #FAEF5D, 0 0 30px #FAEF5D, 0 0 60px #FAEF5D;
-  }
-}
-
-@media (max-width: 480px) {
-  .abc-btn,
-  .header-btn {
-    padding: 9px 12px;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-}
-/* Existing button styles */
-.header-btn {
-  padding: 10px 20px;
-  font-size: 19px;
-  /* ... other existing styles remain the same */
-  min-width: 120px; /* Add minimum width */
-}
-
-/* Mobile-specific adjustments */
-@media screen and (max-width: 768px) {
-  .header-btn {
-    padding: 12px 15px; /* Reduced horizontal padding */
-    font-size: 16px;
-    min-width: 100px; /* Smaller minimum width for mobile */
-  }
-  
-  /* Specific login button adjustments */
-  .header-login {
-    margin-left: 2px !important; /* Reduce spacing between buttons */
-    width: auto; /* Let width adjust to content */
-  }
-}
-
-/* For even smaller screens */
-@media screen and (max-width: 480px) {
-  .header-btn {
-    padding: 10px 12px;
-    font-size: 14px;
-    min-width: 90px;
-  }
-}
-/* Updated Responsive Design */
-@media screen and (max-width: 1024px) {
-  /* ... existing styles ... */
-  
-  .header-hamburger {
-    display: block;
-    z-index: 1001;
-    color: #000; /* Add black color for all mobile views */
-  }
-}
-
-/* Phone-specific adjustments */
-@media screen and (max-width: 480px) {
-  .header-hamburger {
-    transform: scale(0.9);
-    color: #000; /* Ensure color stays black */
+    justify-content: center;
   }
 }

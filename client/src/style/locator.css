@@ -19,7 +19,8 @@
   border-radius: 5px;
   z-index: 1000;
   font-size: 14px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: var(--sg-shadow);
+  border: 1px solid var(--sg-border);
 }
 
 @media (max-width: 768px) {
